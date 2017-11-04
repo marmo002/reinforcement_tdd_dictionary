@@ -25,7 +25,7 @@ class TestDictionary < MiniTest::Test
 
   def test_check_if_keyword_exists
     # refute asserts falsy, !assert
-    refute @d.include?('fish')
+    refute @d.include?('fish') # lookup include? method for hashes
   end
 
   def test_check_if_keyword_exists_after_add
@@ -37,7 +37,7 @@ class TestDictionary < MiniTest::Test
 
   def test_does_not_include_prefix
     @d.add('fish')
-    refute @d.include?('fi')
+    refute @d.include?('fi')# look up prefix ruby method
   end
 
   def test_does_not_find_word_in_empty_dictionary
